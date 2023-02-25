@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PinController!{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block body %}
 
@@ -8,7 +8,7 @@
 
         {% for pin in pins %}
             <article>
-                <h2>{{ pin.title}}</h2>
+                <h2><a href="{{ path('app_pins_show', {id: pin.id})}}">{{ pin.title}}</a></h2>
                 <p>{{ pin.description }}</p>
             </article>
         {% endfor %}
